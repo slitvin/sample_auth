@@ -1,5 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
-@import 'src/scss/App';
+@import './App';
 @import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,600;0,700;1,400;1,900&display=swap');
 
 body {
@@ -8,9 +8,7 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  font: Regular 17px/21px Muli;
-
+  font-size: 17px;
 }
 
 

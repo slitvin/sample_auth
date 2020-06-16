@@ -27,14 +27,14 @@
   justify-content: center;
   min-width: 180px;
   height: 45px;
-  font: SemiBold 17px/20px !important;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 3px;
   letter-spacing: $character-spacing-0-35;
 
   &.facebook {
     background-color: #3B5998;
+    font-size: 16px;
   }
 
   .button-icon {
@@ -47,6 +47,8 @@
   &.submit-button {
     width: 100%;
     font-weight: 600;
+    font-size: 17px;
+
   }
 
 }
@@ -85,11 +87,17 @@
   }
 
   &__message {
-    font: 'Regular'17px/21px;
+    font: Regular 17px/21px;
     text-align: center;
     letter-spacing: $character-spacing-0-42;
     color: #393B41;
     margin-top: 43px;
+    font-size: 17px;
+    line-height: 21px;
+
+    a {
+      font-weight: 600;
+    }
   }
 
   &__way-wrapper {
@@ -127,6 +135,8 @@
     margin-top: 18px;
     font: Regular 14px/18px;
     letter-spacing: $character-spacing-0-35;
+    font-size: 14px;
+    line-height: 18px;
 
     a {
       color: #747984 !important;
@@ -142,7 +152,9 @@
 
   &-label {
     padding-left: 10px;
-
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 18px;
     &:hover {
       cursor: pointer;
     }
@@ -260,7 +272,7 @@
   .links {
     margin-top: 90px;
     margin-bottom: 98px;
-    
+
     a {
       border: 1px solid white;
       min-width: 162px;
@@ -273,6 +285,7 @@
       letter-spacing: 0.6px;
       color: #FFFFFF;
       text-decoration: none;
+
       &:hover {
         opacity: 0.5;
         transition: ease-in 0.3s;
