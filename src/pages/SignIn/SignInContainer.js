@@ -5,14 +5,13 @@ import * as actions from "../../modules/signIn/signInActions";
 import SignIn from "./SignIn";
 import { signInSelectors } from "../../modules/signIn/signInSelectors";
 import { SUCCESS } from "../../config/constants";
-import { useHistory, Redirect } from "react-router-dom";
+import {  Redirect } from "react-router-dom";
 import { findCurrentInputError } from "../../utils/findCurrentInputError";
 import routing from "../../config/routing";
 
 export const SignInContainer = () => {
   const { errors, status } = useSelector(signInSelectors.getLogin);
   const dispatch = useDispatch();
-  const history = useHistory();
 
   const handleSubmit = useCallback(
     (e) => {
@@ -32,6 +31,7 @@ export const SignInContainer = () => {
   );
  useEffect(() => {
   dispatch(actions.clearAll());
+  dispatch(actions.clearAllErrors());
 
  }, [])
   const handleChange = useCallback(

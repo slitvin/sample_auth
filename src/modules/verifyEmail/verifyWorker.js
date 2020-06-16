@@ -1,6 +1,6 @@
-import { all, call, put, select, takeLatest } from "redux-saga/effects";
+import { all, put, select, takeLatest } from "redux-saga/effects";
 import { verifySelectors } from "./verifySelectors";
-import { pushVerify, clearAll } from "./verifyActions";
+import { pushVerify } from "./verifyActions";
 import validateVerifyCode from "../../utils/validation/validateVerifyCode";
 import { saveToken } from "../../services/api";
 
@@ -12,7 +12,6 @@ function* verifyCodeWorker() {
     if (isValid) {
       yield put(pushVerify.success());
       saveToken('token')
-    //   yield put(clearAll())
     } else {
       yield put(pushVerify.failure(errors));
     }
@@ -22,5 +21,5 @@ function* verifyCodeWorker() {
 }
 
 export function* verifyCodeWatcher() {
-  yield all([takeLatest(pushVerify.TRIGGER, verifyCodeWorker)]);
+  yield all([takeLatest(pushVerify, verifyCodeWorker)]);
 }

@@ -1,11 +1,12 @@
-import { all, call, put, select, takeLatest, takeEvery } from 'redux-saga/effects';
-import SignInService from '../../services/signInService';
+import { all,  put, select, takeLatest } from 'redux-saga/effects';
 import { signInSelectors } from './signInSelectors';
-import { pushLogout, pushSignIn, clearAllErrors, clearAll } from './signInActions';
+import { pushLogout, pushSignIn} from './signInActions';
 import { removeToken, saveToken } from '../../services/api';
 import validateLogin from '../../utils/validation/validateLogin';
 
-function logoutWorker() {
+function* logoutWorker() {
+  yield put(pushLogout.request());
+  yield put(pushLogout.request());
   removeToken();
 }
 
@@ -30,8 +31,7 @@ function* loginWorker() {
 
 export function* loginWatcher() {
   yield all([
-    takeLatest(pushSignIn.TRIGGER, loginWorker),
+    takeLatest(pushSignIn, loginWorker),
     takeLatest(pushLogout, logoutWorker),
-    takeEvery(clearAll.TRIGGER, loginWorker)
   ]);
 }

@@ -1,6 +1,6 @@
-import { all, call, put, select, takeLatest } from 'redux-saga/effects';
+import { all, put, select, takeLatest } from 'redux-saga/effects';
 import { signUpSelectors } from './signUpSelectors';
-import { pushSignUp, clearAll } from './signUpActions';
+import { pushSignUp } from './signUpActions';
 import validateAccountCreateForm from '../../utils/validation/validateAccountCreateForm';
 
 function* singUpWorker() {

@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect,useMemo } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SUCCESS } from "../../../config/constants";
 import { useHistory } from "react-router-dom";
