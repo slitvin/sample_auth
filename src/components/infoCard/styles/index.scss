@@ -1,0 +1,31 @@
+.card__info {
+  max-width: 640px;
+  margin: 100px auto 0;
+}
+
+.card__header.card {
+  border: 0;
+  text-align: center;
+}
+
+.card__info .card {
+  min-height: 260px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__alert {
+  border-radius: 0;
+  font-size: 12px;
+  width: 150px;
+}
+
+.card__icon {
+  font-size: 40px;
+  font-weight: 300;
+}

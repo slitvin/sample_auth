@@ -1,0 +1,206 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  color: #333333;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  width: 80%;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.cardTitleWrapper {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 6rem;
+}
+
+.mainContentWrapperRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mainContentWrapperLeft {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.contentWrapperLeft {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapperRight {
+  display: flex;
+  align-items: center;
+}
+
+.copyHolder {
+  opacity: 1;
+}
+
+.sideImgHolder {
+  opacity: 1;
+}
+
+.sideByImg {
+  width: 450px;
+}
+
+.bulletImgHolder {
+  opacity: 1;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-right: 1.25rem;
+}
+
+.bulletImg {
+  width: 20px;
+}
+
+.headline {
+  width: 90%;
+}
+
+.smallHeadline {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: 90%;
+  font-size: 1.9rem;
+  font-weight: 500;
+  max-width: 500px;
+}
+
+.largeHeadline {
+  width: 90%;
+  font-size: 2.9rem;
+  font-weight: 500;
+}
+
+.paragraphHolder {
+  opacity: 1;
+}
+
+.paragraphWrapper {
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+}
+
+.paragraphTitle {
+  margin-top: 1.5rem;
+  margin-bottom: -0.5rem;
+  width: 100%;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.paragraph {
+  line-height: 1.25rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.paragraphLarge {
+  width: 90%;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  max-width: 560px;
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+
+.floatRight {
+  float: right;
+}
+
+.smallTopPadding {
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+
+.medTopSmallBottomPadding {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.smallTopMedBottomPadding {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.smallTopSmallBottomPadding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.noPadding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.fullPadding {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.darkWhite {
+  background-color: #fafafa;
+}
+
+.lightGrey {
+  background-color: #f1f2f2;
+}
+
+.red {
+  background-color: red;
+}
+
+@media only screen and (max-width: 1100px) {
+  .contentWrapper {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  .headline {
+    width: 100%;
+  }
+  .smallHeadline {
+    width: 100%;
+    max-width: 100%;
+  }
+  .largeHeadline {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .paragraphLarge {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .paragraphWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sideByImg {
+    width: 100%;
+  }
+
+  .copyHolder {
+    margin-top: 1rem;
+  }
+}

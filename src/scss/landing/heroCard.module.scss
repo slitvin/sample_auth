@@ -1,0 +1,156 @@
+.wrapper {
+  display: flex;
+  background-color: #c4b7f7;
+  color: #333333;
+  width: 100%;
+
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 3rem;
+  min-height: 100vh;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 80%;
+  order: 0;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.sideImgHolder {
+  width: 100%;
+  margin-top: -20rem;
+  display: flex;
+  order: 0;
+  padding-bottom: 1rem;
+}
+.leftImageDiv {
+  height: 100%;
+  width: 100%;
+}
+.rightImageDiv {
+  height: 100%;
+  width: 100%;
+  margin-right: 5rem;
+}
+
+.headline {
+  width: 75%;
+  letter-spacing: 0.015rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.subHeading {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.015rem;
+  width: 45%;
+}
+.ctaHolder {
+  margin-top: 3rem;
+
+  width: 100%;
+}
+.cta {
+  background-color: #36b752;
+  color: #ffffff;
+  width: 250px;
+  height: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  opacity: 1;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cta:active {
+  outline: 0;
+}
+.cta:hover {
+  background-color: #149530;
+}
+.cta:focus {
+  outline: 0;
+}
+
+.btnHolder {
+  display: flex;
+  justify-content: space-around;
+  opacity: 1;
+  z-index: 5;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.nextImgBtn {
+  color: #333333;
+  width: 200px;
+  height: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  opacity: 1;
+  cursor: pointer;
+  user-select: none;
+}
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    margin-top: 3rem;
+  }
+
+  .leftImageDiv {
+    display: none;
+  }
+  .contentWrapper {
+    padding-bottom: 4rem;
+  }
+  .rightImageDiv {
+    width: 80%;
+    margin: auto;
+  }
+
+  .sideImgHolder {
+    margin-top: 0;
+    order: 0;
+  }
+
+  .headline {
+    width: 100%;
+  }
+  .subHeading {
+    width: 100%;
+  }
+  .ctaHolder {
+    margin-top: 3rem;
+
+    width: 100%;
+  }
+  .cta {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .headline {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .subHeading {
+    width: 100%;
+
+    font-size: 1rem;
+  }
+  .cta {
+    width: 100%;
+    max-width: 100%;
+  }
+}

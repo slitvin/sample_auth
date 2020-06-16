@@ -1,0 +1,132 @@
+.cta {
+  margin-top: 2rem !important;
+  background-color: #1269d3;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cta:active {
+  outline: 0;
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+.cta:focus {
+  outline: 0;
+}
+
+.ctaDark {
+  margin-top: 2rem !important;
+  background-color: #637381;
+  color: #ffffff;
+  width: 150px;
+  height: 35px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.ctaDark:active {
+  outline: 0;
+}
+
+.ctaDark:hover {
+  background-color: #526270;
+}
+
+.ctaDark:focus {
+  outline: 0;
+}
+
+.ctaDarkSuccess {
+  background-color: #637381;
+  color: #ffffff;
+  width: 150px;
+  height: 35px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.ctaDarkSuccess:active {
+  outline: 0;
+}
+
+.ctaDarkSuccess:hover {
+  background-color: #526270;
+}
+
+.ctaDarkSuccess:focus {
+  outline: 0;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.darkWhite {
+  background-color: #fafafa;
+}
+
+.lightGrey {
+  background-color: #f1f2f2;
+}
+
+.red {
+  background-color: red;
+}
+
+.lightPurple {
+  background-color: #c4b7f7;
+}
+
+.smallTopPadding {
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+
+.medTopSmallBottomPadding {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.smallTopMedBottomPadding {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.smallTopSmallBottomPadding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.noPadding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.smallTopNoBottomPadding {
+  padding-top: 14rem;
+  padding-bottom: 0;
+}
+
+.fullPadding {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.fullPaddingTop {
+  padding-top: 5rem;
+  padding-bottom: 0;
+}
+
+.contentCentered {
+  text-align: center;
+  margin: 0 auto;
+}
