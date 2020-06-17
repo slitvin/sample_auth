@@ -15,20 +15,24 @@ api.interceptors.request.use(
 );
 
 api.interceptors.response.use((res) => res.data);
-export function validateUser(loginUser){
-  return new Promise((resolve, reject)=>{
+
+
+export async function validateUser (loginUser){
+  try {
     const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user,loginUser)
     if(user){
-      if(loginUser.email === user.email && loginUser.Password === user.Password){
-        resolve(user)
+      if(loginUser.email === user.email && loginUser.password === user.Password){
+        return user;
       }else{
-        reject('Wrong email or password')
+      throw new Error('Wrong email or password');
       }
     } else{
-      reject('User is not registered')
+      throw new Error('User is not registered');
     }
-
-  });
+  } catch (error) {
+    
+  }
 }
 export function saveToken(token) {
   localStorage.setItem('token', token);

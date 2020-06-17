@@ -1,11 +1,10 @@
-import { all,  put, select, takeLatest } from 'redux-saga/effects';
+import { all, call,  put, select, takeLatest } from 'redux-saga/effects';
 import { signInSelectors } from './signInSelectors';
 import { pushLogout, pushSignIn} from './signInActions';
 import { removeToken, saveToken, validateUser } from '../../services/api';
 import validateLogin from '../../utils/validation/validateLogin';
 
 function* logoutWorker() {
-  yield put(pushLogout.request());
   yield put(pushLogout.request());
   removeToken();
 }
@@ -18,8 +17,8 @@ function* loginWorker() {
 
     const { isValid, errors } = validateLogin(input);
 
-    if (isValid) {
-      yield validateUser();
+    if (isValid ) {
+      yield validateUser(input);
       yield saveToken('token');
       yield put(pushSignIn.success('token'));
     } else {
