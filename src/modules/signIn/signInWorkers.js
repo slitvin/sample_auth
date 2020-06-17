@@ -1,7 +1,7 @@
 import { all,  put, select, takeLatest } from 'redux-saga/effects';
 import { signInSelectors } from './signInSelectors';
 import { pushLogout, pushSignIn} from './signInActions';
-import { removeToken, saveToken } from '../../services/api';
+import { removeToken, saveToken, validateUser } from '../../services/api';
 import validateLogin from '../../utils/validation/validateLogin';
 
 function* logoutWorker() {
@@ -19,6 +19,7 @@ function* loginWorker() {
     const { isValid, errors } = validateLogin(input);
 
     if (isValid) {
+      yield validateUser();
       yield saveToken('token');
       yield put(pushSignIn.success('token'));
     } else {

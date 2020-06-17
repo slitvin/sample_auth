@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useCallback, useEffect} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import StyledButton from '../../components/styledButton'
 import { useDispatch } from 'react-redux';
 import * as actions from '../../modules/signIn/signInActions'
@@ -14,15 +14,20 @@ export default function MainComponent() {
         history.push('/login')
         },
         [],
-    )
+    );
+
+    const [user, setUser] = useState({})
 
     useEffect(() => {
         dispatch(actions.clearAll());
         dispatch(actions.clearAllErrors());
+        const user = localStorage.getItem('user');
+        setUser(JSON.parse(user));
     }, []);
     
     return (
-        <div>
+        <div className="text-center">
+            Welcome, <b> {user.First_Name + ' ' + user.Last_Name}! <br/> </b>
             <StyledButton type='primary' text="Log out" onClick={handleLogout}/>
         </div>
     )

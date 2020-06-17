@@ -2,6 +2,7 @@ import { all, put, select, takeLatest } from 'redux-saga/effects';
 import { signUpSelectors } from './signUpSelectors';
 import { pushSignUp } from './signUpActions';
 import validateAccountCreateForm from '../../utils/validation/validateAccountCreateForm';
+import { saveUser } from '../../services/api';
 
 function* singUpWorker() {
   try {
@@ -11,6 +12,7 @@ function* singUpWorker() {
     const { isValid, errors } = validateAccountCreateForm(input);
 
     if (isValid) {
+      saveUser(input);
       yield put(pushSignUp.success('token'));
     } else {
       yield put(pushSignUp.failure(errors));
