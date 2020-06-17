@@ -28,6 +28,7 @@ export default function MainComponent() {
     return (
         <div className="text-center user-container">
             Welcome, <b> {user.First_Name + ' ' + user.Last_Name}! <br/> </b>
+            <span>{user.email}</span> <br/>
             <StyledButton type='primary' text="Log out" onClick={handleLogout}/>
         </div>
     )

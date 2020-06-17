@@ -1,4 +1,4 @@
-import { all, call,  put, select, takeLatest } from 'redux-saga/effects';
+import { all, put, select, takeLatest } from 'redux-saga/effects';
 import { signInSelectors } from './signInSelectors';
 import { pushLogout, pushSignIn} from './signInActions';
 import { removeToken, saveToken, validateUser } from '../../services/api';
